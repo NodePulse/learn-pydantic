@@ -11,4 +11,10 @@ class Patient(BaseModel):
     age: int
     address: Address
 
-patient
+patient_address = {"city": "Delhi", "state": "Delhi", "pin": 110001}
+address = Address(**patient_address)
+
+patient_info = {"name": "Vikash Kumar", "gender": "Male", "age": 30, "address": address}
+patient = Patient(**patient_info)
+
+print(patient)
